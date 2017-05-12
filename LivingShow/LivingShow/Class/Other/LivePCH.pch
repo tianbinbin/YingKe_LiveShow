@@ -1,0 +1,25 @@
+//
+//  LivePCH.pch
+//  LivingShow
+//
+//  Created by 田彬彬 on 2017/5/12.
+//  Copyright © 2017年 田彬彬. All rights reserved.
+//
+
+#ifndef LivePCH_pch
+#define LivePCH_pch
+
+
+#import "LiveMacros.h"
+#import "Masonry.h"
+#import "LiveTabBar.h"
+#import "LiveTabBarViewController.h"
+#import "LiveMeViewController.h"                                  // 我的界面的控制器
+#import "LiveMainViewController.h"                                // 主界面的控制器
+#import "LiveBaseNavViewController.h"                             // 导航栏
+#import "LiveLaunchiewController.h"                               // 模态视图头文件
+#import "LiveFocusViewController.h"                               // 关注页面
+#import "LiveHotViewController.h"                                 // 热门页面
+#import "LiveNearViewController.h"                                // 附近页面
+
+#endif /* LivePCH_pch */
