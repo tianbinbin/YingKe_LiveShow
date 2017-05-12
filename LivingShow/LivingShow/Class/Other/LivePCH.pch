@@ -21,5 +21,7 @@
 #import "LiveFocusViewController.h"                               // 关注页面
 #import "LiveHotViewController.h"                                 // 热门页面
 #import "LiveNearViewController.h"                                // 附近页面
+#import "LiveMainTopView.h"                                       // main控制器的navtitleView
+#import "UIViewExt.h"                                             // view 的相对布局
 
 #endif /* LivePCH_pch */

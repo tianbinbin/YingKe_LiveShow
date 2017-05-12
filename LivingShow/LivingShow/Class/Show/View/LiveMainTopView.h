@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^MainTopBlock)(NSInteger idx);
+
 @interface LiveMainTopView : UIView
+
+@property (nonatomic, copy) MainTopBlock block;
+
+- (instancetype)initWithFrame:(CGRect)frame Arr:(NSArray *)arr;
+
+-(void)scrolling:(NSInteger)idx;
 
 @end

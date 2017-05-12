@@ -30,6 +30,7 @@
 		37C0E2F81EC5F1C50022BA30 /* LiveNearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2F61EC5F1C50022BA30 /* LiveNearViewController.m */; };
 		37C0E2F91EC5F1C50022BA30 /* LiveNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C0E2F71EC5F1C50022BA30 /* LiveNearViewController.xib */; };
 		37C0E2FC1EC5FC5A0022BA30 /* LiveMainTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2FB1EC5FC5A0022BA30 /* LiveMainTopView.m */; };
+		37C0E2FF1EC6098A0022BA30 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */; };
 		512D7A31F79DE0960EDA9780 /* libPods-LivingShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 822C6F13060F9E98F1D0610B /* libPods-LivingShow.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		37C0E2F71EC5F1C50022BA30 /* LiveNearViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveNearViewController.xib; sourceTree = "<group>"; };
 		37C0E2FA1EC5FC5A0022BA30 /* LiveMainTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveMainTopView.h; sourceTree = "<group>"; };
 		37C0E2FB1EC5FC5A0022BA30 /* LiveMainTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveMainTopView.m; sourceTree = "<group>"; };
+		37C0E2FD1EC6098A0022BA30 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		69E6499B570C769C9447AA46 /* Pods-LivingShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivingShow/Pods-LivingShow.release.xcconfig"; sourceTree = "<group>"; };
 		822C6F13060F9E98F1D0610B /* libPods-LivingShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivingShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700ACACC814E8EDA0F3C6A6 /* Pods-LivingShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivingShow/Pods-LivingShow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 		37C0E2AF1EC58AB00022BA30 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				37C0E2FD1EC6098A0022BA30 /* UIViewExt.h */,
+				37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				37C0E2EE1EC5F18C0022BA30 /* LiveFocusViewController.m in Sources */,
 				37C0E2F31EC5F19E0022BA30 /* LiveHotViewController.m in Sources */,
 				37C0E2D81EC59A510022BA30 /* LiveBaseViewController.m in Sources */,
+				37C0E2FF1EC6098A0022BA30 /* UIViewExt.m in Sources */,
 				37C0E2CD1EC58AB00022BA30 /* ViewController.m in Sources */,
 				37C0E2CC1EC58AB00022BA30 /* AppDelegate.m in Sources */,
 				37C0E2E91EC5E90C0022BA30 /* LiveLaunchiewController.m in Sources */,

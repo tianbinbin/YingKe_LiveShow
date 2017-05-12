@@ -8,10 +8,12 @@
 
 #import "LiveMainViewController.h"
 
+
 @interface LiveMainViewController ()<UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *contenScrollView;
 @property (nonatomic, strong) NSArray * datalist;                           // 标题库
+@property (nonatomic, strong) LiveMainTopView * topView;                    // 标题头
 
 @end
 
@@ -26,6 +28,24 @@
     return _datalist;
 }
 
+-(LiveMainTopView *)topView
+{
+    if(!_topView){
+      
+        _topView = [[LiveMainTopView alloc]initWithFrame:CGRectMake(0, 0, 200, 50) Arr:self.datalist];
+    
+        __weak LiveMainViewController * weakself = self;
+        
+        _topView.block = ^(NSInteger tag){
+
+            CGPoint point =  CGPointMake(tag*SCREEN_WIDTH, weakself.contenScrollView.contentOffset.y);
+            [weakself.contenScrollView setContentOffset:point animated:YES];
+        
+        };
+    }
+    return _topView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,6 +56,8 @@
 
 -(void)initUI
 {
+    self.navigationItem.titleView = self.topView;
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"global_search"] style:UIBarButtonItemStylePlain target:self action:@selector(LeftItemClick:)];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"title_button_more"] style:UIBarButtonItemStylePlain target:self action:@selector(RightItemClick:)];
@@ -86,19 +108,26 @@
 // 减速结束之后加载子试图控制器
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+// 动画结束调用代理
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
     // 每一个子试图控制器的宽度和高度
     CGFloat width = SCREEN_WIDTH;
     NSLog(@"tb----%@---%f",@(scrollView.frame.size.width),SCREEN_WIDTH);
     CGFloat height = SCREEN_HEIGHT;
     CGFloat offset = scrollView.contentOffset.x;
-
+    
     NSInteger idx = offset/width;
+    [self.topView scrolling:idx];
     
     UIViewController * vc = self.childViewControllers[idx];
     
     // 判断当前vc 是否执行过viewdidload
     if([vc isViewLoaded]) return;
-   
+    
     // 设置子试图控制器view 的大小 然后将子试图控制器的view 加载到scrollView
     vc.view.frame = CGRectMake(offset, 0, scrollView.frame.size.width, height);
     [scrollView addSubview:vc.view];
