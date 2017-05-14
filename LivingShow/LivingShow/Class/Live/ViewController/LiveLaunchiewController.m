@@ -26,5 +26,18 @@
     }];
 }
 
+- (IBAction)StartLiveBtn:(id)sender {
+    
+    UIView * back = [[UIView alloc] initWithFrame:self.view.bounds];
+    back.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:back];
+    
+    // 开始直播
+    LFLivePreview * liveView = [[LFLivePreview alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:liveView];
+
+    
+    
+}
 
 @end

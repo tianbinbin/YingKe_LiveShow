@@ -17,8 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    LiveTabBarViewController * mianVC = [[LiveTabBarViewController alloc]init];
-    self.window.rootViewController = mianVC;
+    [self setupUmeng];
+    
+    UIViewController * mainVC ;
+    
+    
+    if ([SXTUserHelper isAutoLogin]) {
+        
+        mainVC = [[LiveTabBarViewController alloc] init];
+        
+    } else {
+        mainVC = [[LiveloginViewController alloc] init];
+        
+    }
+
+    self.window.rootViewController = mainVC;
     
     // 获取经纬度
     [[LiveLocationManager shareManager]getGps:^(NSString *lat, NSString *lon) {
@@ -35,6 +48,15 @@
     return YES;
 }
 
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    BOOL result = [UMSocialSnsService handleOpenURL:url];
+    if (result == FALSE) {
+        //调用其他SDK，例如支付宝SDK等
+    }
+    return result;
+}
 
 
 

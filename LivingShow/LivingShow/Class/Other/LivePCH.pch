@@ -42,6 +42,11 @@
 #import "SXTAdvertise.h"
 #import "SXTCacheHelper.h"
 #import "LiveAdvertisView.h"
-
+#import "LFLivePreview.h"
+#import "LiveloginViewController.h"
+#import "AppDelegate+SXTUMeung.h"
+#import "UMSocial.h"
+#import "UMSocialSinaSSOHandler.h"
+#import "SXTUserHelper.h"
 
 #endif /* LivePCH_pch */
