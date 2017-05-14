@@ -28,5 +28,5 @@
 #import "UIImageView+SDWebImage.h"                                // SDWebImage的封装
 #import "LiveBaseHandler.h"
 #import "LiveLiveHandler.h"
-
+#import <MediaPlayer/MediaPlayer.h>
 #endif /* LivePCH_pch */

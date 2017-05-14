@@ -10,6 +10,8 @@
 
 @interface LiveHotViewController ()
 
+@property (nonatomic, strong) UITableView * tableview;
+
 @end
 
 @implementation LiveHotViewController
