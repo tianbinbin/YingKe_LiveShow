@@ -23,5 +23,10 @@
 #import "LiveNearViewController.h"                                // 附近页面
 #import "LiveMainTopView.h"                                       // main控制器的navtitleView
 #import "UIViewExt.h"                                             // view 的相对布局
+#import "APIConfig.h"                                             // 网络请求的宏
+#import "HttpTool.h"                                              // 网络请求的封装
+#import "UIImageView+SDWebImage.h"                                // SDWebImage的封装
+#import "LiveBaseHandler.h"
+#import "LiveLiveHandler.h"
 
 #endif /* LivePCH_pch */

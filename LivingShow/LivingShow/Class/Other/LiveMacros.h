@@ -15,4 +15,9 @@
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height                             // 屏幕高
 #define RGB(x,y,z) [UIColor colorWithRed:(x/255.0) green:(y/255.0) blue:(z/255.0) alpha:1]  // 颜色
 
+
+
+// 网络宏定义
+#define LiveShowSever @"http://service.ingkee.com/api/live/topicindex"
+
 #endif /* LiveMacros_h */
