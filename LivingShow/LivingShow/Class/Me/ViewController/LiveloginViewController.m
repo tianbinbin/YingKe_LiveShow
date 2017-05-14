@@ -21,6 +21,7 @@
 
 - (IBAction)weibologin:(id)sender {
     
+    // 微博登陆
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
     
     snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
