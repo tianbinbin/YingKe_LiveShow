@@ -7,7 +7,7 @@
 //
 
 #import "LiveLiveHandler.h"
-
+#import "MJExtension.h"
 
 @implementation LiveLiveHandler
 
@@ -31,5 +31,52 @@
         failed(error);
     }];
 }
+
++ (void)executeNearLiveTaskWithSuccess:(SuccessBlock)success
+                                failed:(FaildedBlock)failed{
+    
+    NSDictionary * params = @{@"uid":@"85149891",
+                              @"latitude":@"40.090562",
+                              @"longitude":@"116.413353"
+                              };
+    
+    [HttpTool getWithPath:API_NearLocation params:params success:^(id json) {
+        
+        
+        NSInteger error = [json[@"dm_error"] integerValue];
+        
+        if (!error) {
+            
+            NSArray * lives = [LiveLiew mj_objectArrayWithKeyValuesArray:json[@"lives"]];
+            
+            success(lives);
+            
+        } else {
+            
+            failed(json);
+            
+        }
+
+    } failure:^(NSError *error) {
+        
+        failed(error);
+    }];
+}
+
+
++ (void)executeGetAdvertiseWithSuccess:(SuccessBlock)success
+                                failed:(FaildedBlock)failed {
+    
+    [HttpTool getWithPath:API_Advertise params:nil success:^(id json) {
+        
+        NSDictionary * resources = json[@"resources"][0];
+        SXTAdvertise * ad = [SXTAdvertise mj_objectWithKeyValues:resources];
+        success(ad);
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 
 @end

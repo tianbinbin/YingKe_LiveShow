@@ -29,4 +29,19 @@
 #import "LiveBaseHandler.h"
 #import "LiveLiveHandler.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "LivePlayerViewController.h"                              // 直播播放页面
+#import "LiveLiveChatViewController.h"                            // 聊天页面
+#import "LiveLocationManager.h"
+#import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
+#import "LiveLocationManager.h"
+#import "MJExtensionConst.h"
+#import "LiveCreator.h"
+#import "LiveLiew.h"
+#import "LiveNearCollectionViewCell.h"
+#import "SXTAdvertise.h"
+#import "SXTCacheHelper.h"
+#import "LiveAdvertisView.h"
+
+
 #endif /* LivePCH_pch */

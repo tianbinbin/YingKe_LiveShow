@@ -8,7 +8,14 @@
 
 #import "LiveNearViewController.h"
 
-@interface LiveNearViewController ()
+#define kItemSizeW 100
+#define kMargin 5
+static NSString * identifier = @"LiveNearCollectionViewCell";
+
+@interface LiveNearViewController ()<UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSArray * dataList;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -16,22 +23,89 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+ 
+    [self.collectionView registerNib:[UINib nibWithNibName:@"LiveNearCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:identifier];
+    
+    [self loadData];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(void)loadData
+{
+    [LiveLiveHandler executeNearLiveTaskWithSuccess:^(id obj) {
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"%@",obj);
+            
+            self.dataList = obj;
+            [self.collectionView reloadData];
+        });
+
+        
+    } failed:^(id obj) {
+        
+        NSLog(@"%@",obj);
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CGFloat outInset = self.view.width - 2 * kMargin;
+    NSInteger count = outInset / kItemSizeW;
+    NSInteger extraTotal = (NSInteger)(outInset - kMargin * (count - 1 ));
+    
+    CGFloat itemWH;
+    
+    if (extraTotal < count * kItemSizeW) {
+        
+        itemWH = extraTotal / count;
+        
+    } else {
+        
+        CGFloat extraWidth = extraTotal % kItemSizeW;
+        itemWH = kItemSizeW + extraWidth / count;
+    }
+    
+    return CGSizeMake(itemWH, itemWH + 25);
 }
-*/
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.dataList.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LiveNearCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    cell.live = self.dataList[indexPath.row];
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LivePlayerViewController * playerVC = [[LivePlayerViewController alloc] init];
+    
+//    LiveLiew * live  = self.dataList[indexPath.row];
+    
+    playerVC.urlStr = @"rtmp://live.hkstv.hk.lxdns.com/live/hks";
+    
+    [self.navigationController pushViewController:playerVC animated:YES];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LiveNearCollectionViewCell * c = (LiveNearCollectionViewCell *)cell;
+    [c showAnimation];
+}
+
 
 @end

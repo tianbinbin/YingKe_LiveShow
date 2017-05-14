@@ -23,8 +23,23 @@
 		378C3A081EC844E000661396 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A071EC844E000661396 /* MobileCoreServices.framework */; };
 		378C3A0A1EC844E800661396 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A091EC844E800661396 /* OpenGLES.framework */; };
 		378C3A0C1EC844F000661396 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A0B1EC844F000661396 /* QuartzCore.framework */; };
-		378C3A0E1EC844F800661396 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A0D1EC844F800661396 /* UIKit.framework */; };
 		378C3A101EC8450200661396 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A0F1EC8450200661396 /* VideoToolbox.framework */; };
+		378C3A131EC845D200661396 /* LivePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A121EC845D200661396 /* LivePlayerViewController.m */; };
+		378C3A1E1EC8508E00661396 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A1D1EC8508E00661396 /* IJKMediaFramework.framework */; };
+		378C3A221EC85AD400661396 /* LiveLiveChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A201EC85AD400661396 /* LiveLiveChatViewController.m */; };
+		378C3A231EC85AD400661396 /* LiveLiveChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C3A211EC85AD400661396 /* LiveLiveChatViewController.xib */; };
+		378C3A281EC8667C00661396 /* NSString+CachePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A251EC8667C00661396 /* NSString+CachePath.m */; };
+		378C3A291EC8667C00661396 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A271EC8667C00661396 /* UIColor+HEX.m */; };
+		378C3A2E1EC8669900661396 /* SXTCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A2B1EC8669900661396 /* SXTCacheHelper.m */; };
+		378C3A2F1EC8669900661396 /* SXTUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A2D1EC8669900661396 /* SXTUserHelper.m */; };
+		378C3A351EC8672800661396 /* LiveLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A341EC8672800661396 /* LiveLocationManager.m */; };
+		378C3A371EC867A200661396 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378C3A361EC867A200661396 /* CoreLocation.framework */; };
+		378C3A3A1EC872E300661396 /* LiveCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A391EC872E300661396 /* LiveCreator.m */; };
+		378C3A3D1EC8733400661396 /* SXTAdvertise.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A3C1EC8733400661396 /* SXTAdvertise.m */; };
+		378C3A411EC8743D00661396 /* LiveNearCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A3F1EC8743D00661396 /* LiveNearCollectionViewCell.m */; };
+		378C3A421EC8743D00661396 /* LiveNearCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C3A401EC8743D00661396 /* LiveNearCollectionViewCell.xib */; };
+		378C3A451EC87C0800661396 /* LiveAdvertisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C3A441EC87C0800661396 /* LiveAdvertisView.m */; };
+		378C3A471EC87C1B00661396 /* LiveAdvertisView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C3A461EC87C1B00661396 /* LiveAdvertisView.xib */; };
 		37C0E2971EC589EC0022BA30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2961EC589EC0022BA30 /* main.m */; };
 		37C0E2A01EC589EC0022BA30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C0E29E1EC589EC0022BA30 /* Main.storyboard */; };
 		37C0E2A21EC589EC0022BA30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C0E2A11EC589EC0022BA30 /* Assets.xcassets */; };
@@ -76,6 +91,33 @@
 		378C3A0B1EC844F000661396 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		378C3A0D1EC844F800661396 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		378C3A0F1EC8450200661396 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		378C3A111EC845D200661396 /* LivePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayerViewController.h; sourceTree = "<group>"; };
+		378C3A121EC845D200661396 /* LivePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePlayerViewController.m; sourceTree = "<group>"; };
+		378C3A1D1EC8508E00661396 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		378C3A1F1EC85AD400661396 /* LiveLiveChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveLiveChatViewController.h; sourceTree = "<group>"; };
+		378C3A201EC85AD400661396 /* LiveLiveChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveLiveChatViewController.m; sourceTree = "<group>"; };
+		378C3A211EC85AD400661396 /* LiveLiveChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveLiveChatViewController.xib; sourceTree = "<group>"; };
+		378C3A241EC8667C00661396 /* NSString+CachePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CachePath.h"; sourceTree = "<group>"; };
+		378C3A251EC8667C00661396 /* NSString+CachePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CachePath.m"; sourceTree = "<group>"; };
+		378C3A261EC8667C00661396 /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		378C3A271EC8667C00661396 /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
+		378C3A2A1EC8669900661396 /* SXTCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTCacheHelper.h; sourceTree = "<group>"; };
+		378C3A2B1EC8669900661396 /* SXTCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTCacheHelper.m; sourceTree = "<group>"; };
+		378C3A2C1EC8669900661396 /* SXTUserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTUserHelper.h; sourceTree = "<group>"; };
+		378C3A2D1EC8669900661396 /* SXTUserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTUserHelper.m; sourceTree = "<group>"; };
+		378C3A331EC8672800661396 /* LiveLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveLocationManager.h; sourceTree = "<group>"; };
+		378C3A341EC8672800661396 /* LiveLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveLocationManager.m; sourceTree = "<group>"; };
+		378C3A361EC867A200661396 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		378C3A381EC872E300661396 /* LiveCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCreator.h; sourceTree = "<group>"; };
+		378C3A391EC872E300661396 /* LiveCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCreator.m; sourceTree = "<group>"; };
+		378C3A3B1EC8733400661396 /* SXTAdvertise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTAdvertise.h; sourceTree = "<group>"; };
+		378C3A3C1EC8733400661396 /* SXTAdvertise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTAdvertise.m; sourceTree = "<group>"; };
+		378C3A3E1EC8743D00661396 /* LiveNearCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveNearCollectionViewCell.h; sourceTree = "<group>"; };
+		378C3A3F1EC8743D00661396 /* LiveNearCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveNearCollectionViewCell.m; sourceTree = "<group>"; };
+		378C3A401EC8743D00661396 /* LiveNearCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveNearCollectionViewCell.xib; sourceTree = "<group>"; };
+		378C3A431EC87C0800661396 /* LiveAdvertisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveAdvertisView.h; sourceTree = "<group>"; };
+		378C3A441EC87C0800661396 /* LiveAdvertisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveAdvertisView.m; sourceTree = "<group>"; };
+		378C3A461EC87C1B00661396 /* LiveAdvertisView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveAdvertisView.xib; sourceTree = "<group>"; };
 		37C0E2921EC589EC0022BA30 /* LivingShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivingShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C0E2961EC589EC0022BA30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37C0E29F1EC589EC0022BA30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,8 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378C3A371EC867A200661396 /* CoreLocation.framework in Frameworks */,
 				378C3A101EC8450200661396 /* VideoToolbox.framework in Frameworks */,
-				378C3A0E1EC844F800661396 /* UIKit.framework in Frameworks */,
 				378C3A0C1EC844F000661396 /* QuartzCore.framework in Frameworks */,
 				378C3A0A1EC844E800661396 /* OpenGLES.framework in Frameworks */,
 				378C3A081EC844E000661396 /* MobileCoreServices.framework in Frameworks */,
@@ -143,6 +185,7 @@
 				378C39FA1EC8449100661396 /* AudioToolbox.framework in Frameworks */,
 				378C39F81EC843FD00661396 /* AVFoundation.framework in Frameworks */,
 				512D7A31F79DE0960EDA9780 /* libPods-LivingShow.a in Frameworks */,
+				378C3A1E1EC8508E00661396 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +276,10 @@
 		37C0E2AF1EC58AB00022BA30 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				378C3A241EC8667C00661396 /* NSString+CachePath.h */,
+				378C3A251EC8667C00661396 /* NSString+CachePath.m */,
+				378C3A261EC8667C00661396 /* UIColor+HEX.h */,
+				378C3A271EC8667C00661396 /* UIColor+HEX.m */,
 				37C0E2FD1EC6098A0022BA30 /* UIViewExt.h */,
 				37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */,
 			);
@@ -242,6 +289,12 @@
 		37C0E2B01EC58AB00022BA30 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				378C3A331EC8672800661396 /* LiveLocationManager.h */,
+				378C3A341EC8672800661396 /* LiveLocationManager.m */,
+				378C3A2A1EC8669900661396 /* SXTCacheHelper.h */,
+				378C3A2B1EC8669900661396 /* SXTCacheHelper.m */,
+				378C3A2C1EC8669900661396 /* SXTUserHelper.h */,
+				378C3A2D1EC8669900661396 /* SXTUserHelper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -423,6 +476,13 @@
 			children = (
 				378C39F11EC8284400661396 /* LiveLiew.h */,
 				378C39F21EC8284400661396 /* LiveLiew.m */,
+				378C3A381EC872E300661396 /* LiveCreator.h */,
+				378C3A391EC872E300661396 /* LiveCreator.m */,
+				378C3A3B1EC8733400661396 /* SXTAdvertise.h */,
+				378C3A3C1EC8733400661396 /* SXTAdvertise.m */,
+				378C3A431EC87C0800661396 /* LiveAdvertisView.h */,
+				378C3A441EC87C0800661396 /* LiveAdvertisView.m */,
+				378C3A461EC87C1B00661396 /* LiveAdvertisView.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +492,9 @@
 			children = (
 				37C0E2FA1EC5FC5A0022BA30 /* LiveMainTopView.h */,
 				37C0E2FB1EC5FC5A0022BA30 /* LiveMainTopView.m */,
+				378C3A3E1EC8743D00661396 /* LiveNearCollectionViewCell.h */,
+				378C3A3F1EC8743D00661396 /* LiveNearCollectionViewCell.m */,
+				378C3A401EC8743D00661396 /* LiveNearCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,6 +517,11 @@
 				37C0E2F51EC5F1C50022BA30 /* LiveNearViewController.h */,
 				37C0E2F61EC5F1C50022BA30 /* LiveNearViewController.m */,
 				37C0E2F71EC5F1C50022BA30 /* LiveNearViewController.xib */,
+				378C3A111EC845D200661396 /* LivePlayerViewController.h */,
+				378C3A121EC845D200661396 /* LivePlayerViewController.m */,
+				378C3A1F1EC85AD400661396 /* LiveLiveChatViewController.h */,
+				378C3A201EC85AD400661396 /* LiveLiveChatViewController.m */,
+				378C3A211EC85AD400661396 /* LiveLiveChatViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -470,6 +538,8 @@
 		F85DBA8B4D79C148E803650D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				378C3A361EC867A200661396 /* CoreLocation.framework */,
+				378C3A1D1EC8508E00661396 /* IJKMediaFramework.framework */,
 				378C3A0F1EC8450200661396 /* VideoToolbox.framework */,
 				378C3A0D1EC844F800661396 /* UIKit.framework */,
 				378C3A0B1EC844F000661396 /* QuartzCore.framework */,
@@ -553,11 +623,14 @@
 				37C0E2E21EC59A980022BA30 /* LiveMeViewController.xib in Resources */,
 				37C0E2A51EC589EC0022BA30 /* LaunchScreen.storyboard in Resources */,
 				37C0E2A21EC589EC0022BA30 /* Assets.xcassets in Resources */,
+				378C3A421EC8743D00661396 /* LiveNearCollectionViewCell.xib in Resources */,
 				37C0E2A01EC589EC0022BA30 /* Main.storyboard in Resources */,
+				378C3A231EC85AD400661396 /* LiveLiveChatViewController.xib in Resources */,
 				37C0E2F41EC5F19E0022BA30 /* LiveHotViewController.xib in Resources */,
 				37C0E2EA1EC5E90C0022BA30 /* LiveLaunchiewController.xib in Resources */,
 				37C0E2F91EC5F1C50022BA30 /* LiveNearViewController.xib in Resources */,
 				37C0E2EF1EC5F18C0022BA30 /* LiveFocusViewController.xib in Resources */,
+				378C3A471EC87C1B00661396 /* LiveAdvertisView.xib in Resources */,
 				37C0E2DD1EC59A790022BA30 /* LiveMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,23 +692,34 @@
 			files = (
 				37C0E2F81EC5F1C50022BA30 /* LiveNearViewController.m in Sources */,
 				37C0E2D21EC5937F0022BA30 /* LiveTabBarViewController.m in Sources */,
+				378C3A411EC8743D00661396 /* LiveNearCollectionViewCell.m in Sources */,
 				37C0E2DC1EC59A790022BA30 /* LiveMainViewController.m in Sources */,
 				370D9E211EC81E8600FD9514 /* HttpTool.m in Sources */,
 				37C0E2E11EC59A980022BA30 /* LiveMeViewController.m in Sources */,
 				370D9E251EC8208900FD9514 /* LiveBaseHandler.m in Sources */,
+				378C3A451EC87C0800661396 /* LiveAdvertisView.m in Sources */,
 				37C0E2EE1EC5F18C0022BA30 /* LiveFocusViewController.m in Sources */,
+				378C3A2E1EC8669900661396 /* SXTCacheHelper.m in Sources */,
+				378C3A3A1EC872E300661396 /* LiveCreator.m in Sources */,
+				378C3A131EC845D200661396 /* LivePlayerViewController.m in Sources */,
 				37C0E2F31EC5F19E0022BA30 /* LiveHotViewController.m in Sources */,
 				37C0E2D81EC59A510022BA30 /* LiveBaseViewController.m in Sources */,
 				37C0E2FF1EC6098A0022BA30 /* UIViewExt.m in Sources */,
 				37C0E2CD1EC58AB00022BA30 /* ViewController.m in Sources */,
 				37C0E2CC1EC58AB00022BA30 /* AppDelegate.m in Sources */,
+				378C3A3D1EC8733400661396 /* SXTAdvertise.m in Sources */,
+				378C3A291EC8667C00661396 /* UIColor+HEX.m in Sources */,
 				370D9E221EC81E8600FD9514 /* UIImageView+SDWebImage.m in Sources */,
 				37C0E2E91EC5E90C0022BA30 /* LiveLaunchiewController.m in Sources */,
+				378C3A281EC8667C00661396 /* NSString+CachePath.m in Sources */,
 				37C0E2971EC589EC0022BA30 /* main.m in Sources */,
+				378C3A351EC8672800661396 /* LiveLocationManager.m in Sources */,
 				37C0E2FC1EC5FC5A0022BA30 /* LiveMainTopView.m in Sources */,
 				37C0E2E51EC59BB50022BA30 /* LiveBaseNavViewController.m in Sources */,
 				37C0E2D51EC5938F0022BA30 /* LiveTabBar.m in Sources */,
+				378C3A2F1EC8669900661396 /* SXTUserHelper.m in Sources */,
 				378C39F31EC8284400661396 /* LiveLiew.m in Sources */,
+				378C3A221EC85AD400661396 /* LiveLiveChatViewController.m in Sources */,
 				370D9E281EC8215C00FD9514 /* LiveLiveHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +840,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LivingShow/Class/Lib",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LivingShow/Class/Other/LivePCH.pch";
 				INFOPLIST_FILE = LivingShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -770,6 +859,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LivingShow/Class/Lib",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LivingShow/Class/Other/LivePCH.pch";
 				INFOPLIST_FILE = LivingShow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

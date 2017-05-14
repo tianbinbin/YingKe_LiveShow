@@ -130,7 +130,7 @@
     }
     
     [self.carmaBtn sizeToFit];
-    self.carmaBtn.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height-50);
+    self.carmaBtn.center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height-30);
 
 }
 

@@ -12,4 +12,15 @@
 
 +(void)exexuteGetHotLiveTaskWithSuccess:(SuccessBlock)success failed:(FaildedBlock)failed;
 
+
+//附近 的直播
++ (void)executeNearLiveTaskWithSuccess:(SuccessBlock)success
+                                failed:(FaildedBlock)failed;
+
+
+
+//下载广告
++ (void)executeGetAdvertiseWithSuccess:(SuccessBlock)success
+                                failed:(FaildedBlock)failed;
+
 @end
