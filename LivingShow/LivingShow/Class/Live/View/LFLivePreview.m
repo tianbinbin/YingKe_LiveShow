@@ -52,13 +52,13 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         [self requestAccessForVideo];
         [self requestAccessForAudio];
         
-        
-//        [self addSubview:self.containerView];
-//        [self.containerView addSubview:self.stateLabel];
-//        [self.containerView addSubview:self.closeButton];
-//        [self.containerView addSubview:self.cameraButton];
-//        [self.containerView addSubview:self.beautyButton];
-//        [self.containerView addSubview:self.startLiveButton];
+
+        [self addSubview:self.containerView];
+        [self.containerView addSubview:self.stateLabel];
+        [self.containerView addSubview:self.closeButton];
+        [self.containerView addSubview:self.cameraButton];
+        [self.containerView addSubview:self.beautyButton];
+        [self.containerView addSubview:self.startLiveButton];
     }
     return self;
 }
@@ -150,27 +150,38 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
     NSLog(@"errorCode: %ld", errorCode);
 }
 
+
+// 配置直播会话
 #pragma mark -- Getter Setter
 - (LFLiveSession *)session {
     if (!_session) {
+        
         /**      发现大家有不会用横屏的请注意啦，横屏需要在ViewController  supportedInterfaceOrientations修改方向  默认竖屏  ****/
         /**      发现大家有不会用横屏的请注意啦，横屏需要在ViewController  supportedInterfaceOrientations修改方向  默认竖屏  ****/
         /**      发现大家有不会用横屏的请注意啦，横屏需要在ViewController  supportedInterfaceOrientations修改方向  默认竖屏  ****/
-
 
         /***   默认分辨率368 ＊ 640  音频：44.1 iphone6以上48  双声道  方向竖屏 ***/
-        LFLiveVideoConfiguration *videoConfiguration = [LFLiveVideoConfiguration new];
+        
+        LFLiveVideoConfiguration *videoConfiguration = [LFLiveVideoConfiguration defaultConfiguration];
+        
+        /*
         videoConfiguration.videoSize = CGSizeMake(640, 360);
         videoConfiguration.videoBitRate = 800*1024;
         videoConfiguration.videoMaxBitRate = 1000*1024;
         videoConfiguration.videoMinBitRate = 500*1024;
         videoConfiguration.videoFrameRate = 24;
         videoConfiguration.videoMaxKeyframeInterval = 48;
-        videoConfiguration.outputImageOrientation = UIInterfaceOrientationLandscapeLeft;
+        videoConfiguration.outputImageOrientation = UIInterfaceOrientationPortrait;
         videoConfiguration.autorotate = NO;
         videoConfiguration.sessionPreset = LFCaptureSessionPreset720x1280;
+         
+         */
+        
+ 
+        
+        
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:videoConfiguration captureType:LFLiveCaptureDefaultMask];
-
+        
         /**    自己定制单声道  */
         /*
            LFLiveAudioConfiguration *audioConfiguration = [LFLiveAudioConfiguration new];
@@ -304,7 +315,13 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         _closeButton.top = 20;
         [_closeButton setImage:[UIImage imageNamed:@"close_preview"] forState:UIControlStateNormal];
         _closeButton.exclusiveTouch = YES;
+        
+        __weak typeof(self) _self = self;
         [_closeButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
+            
+            [_self Stoplive];
+            
+            [_self.VC dismissViewControllerAnimated:YES completion:nil];
 
         }];
     }
@@ -321,9 +338,10 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         __weak typeof(self) _self = self;
         [_cameraButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
             
-            
+            // 切换前后摄像头
             AVCaptureDevicePosition devicePositon = _self.session.captureDevicePosition;
             _self.session.captureDevicePosition = (devicePositon == AVCaptureDevicePositionBack) ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
+            
         }];
     }
     return _cameraButton;
@@ -363,18 +381,45 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         [_startLiveButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
             _self.startLiveButton.selected = !_self.startLiveButton.selected;
             if (_self.startLiveButton.selected) {
+                
+
+                // 开启直播
                 [_self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
                 LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
-                stream.url = @"rtmp://live.hkstv.hk.lxdns.com:1935/live/stream153";
+                stream.url = @"rtmp://live.hkstv.hk.lxdns.com:1935/live/153cm";
+
                 [_self.session startLive:stream];
             } else {
                 [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
+                
+                // 结束直播
                 [_self.session stopLive];
             }
         }];
     }
     return _startLiveButton;
 }
+
+
+-(void)StartLiew
+{
+    // 开启直播
+    [self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
+    LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
+    stream.url = @"rtmp://live.hkstv.hk.lxdns.com:1935/live/dahuan";
+    
+    [self.session startLive:stream];
+
+}
+
+-(void)Stoplive
+{
+    [self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
+    
+    // 结束直播
+    [self.session stopLive];
+}
+
 
 @end
 

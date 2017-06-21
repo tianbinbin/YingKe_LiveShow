@@ -91,6 +91,7 @@
 		37C0E2F91EC5F1C50022BA30 /* LiveNearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37C0E2F71EC5F1C50022BA30 /* LiveNearViewController.xib */; };
 		37C0E2FC1EC5FC5A0022BA30 /* LiveMainTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2FB1EC5FC5A0022BA30 /* LiveMainTopView.m */; };
 		37C0E2FF1EC6098A0022BA30 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */; };
+		37F3219A1ECC977800239590 /* TBAFNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F321991ECC977800239590 /* TBAFNetManager.m */; };
 		512D7A31F79DE0960EDA9780 /* libPods-LivingShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 822C6F13060F9E98F1D0610B /* libPods-LivingShow.a */; };
 /* End PBXBuildFile section */
 
@@ -242,6 +243,8 @@
 		37C0E2FD1EC6098A0022BA30 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		37C0E2FE1EC6098A0022BA30 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		37C0E3011EC613680022BA30 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		37F321981ECC977800239590 /* TBAFNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBAFNetManager.h; sourceTree = "<group>"; };
+		37F321991ECC977800239590 /* TBAFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBAFNetManager.m; sourceTree = "<group>"; };
 		69E6499B570C769C9447AA46 /* Pods-LivingShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-LivingShow/Pods-LivingShow.release.xcconfig"; sourceTree = "<group>"; };
 		822C6F13060F9E98F1D0610B /* libPods-LivingShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LivingShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F700ACACC814E8EDA0F3C6A6 /* Pods-LivingShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LivingShow/Pods-LivingShow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -617,6 +620,8 @@
 				370D9E1F1EC81E8600FD9514 /* UIImageView+SDWebImage.h */,
 				370D9E201EC81E8600FD9514 /* UIImageView+SDWebImage.m */,
 				37C0E3011EC613680022BA30 /* APIConfig.h */,
+				37F321981ECC977800239590 /* TBAFNetManager.h */,
+				37F321991ECC977800239590 /* TBAFNetManager.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -772,13 +777,14 @@
 		37C0E28A1EC589EC0022BA30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Live;
+				CLASSPREFIX = TB;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "田彬彬";
 				TargetAttributes = {
 					37C0E2911EC589EC0022BA30 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = YKZE487C67;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -907,6 +913,7 @@
 				378C3A451EC87C0800661396 /* LiveAdvertisView.m in Sources */,
 				37C0E2EE1EC5F18C0022BA30 /* LiveFocusViewController.m in Sources */,
 				378C3A2E1EC8669900661396 /* SXTCacheHelper.m in Sources */,
+				37F3219A1ECC977800239590 /* TBAFNetManager.m in Sources */,
 				378C3A3A1EC872E300661396 /* LiveCreator.m in Sources */,
 				378C3A131EC845D200661396 /* LivePlayerViewController.m in Sources */,
 				37C0E2F31EC5F19E0022BA30 /* LiveHotViewController.m in Sources */,
@@ -1059,6 +1066,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: matu zheng (G26R6KR5M9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: matu zheng (G26R6KR5M9)";
+				DEVELOPMENT_TEAM = YKZE487C67;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib",
@@ -1066,14 +1076,17 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LivingShow/Class/Other/LivePCH.pch";
 				INFOPLIST_FILE = LivingShow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib/UMSocial_Sdk_5.2.1",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kkeye.cn.LivingShow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatlive.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6d8c9c1c-9250-4db6-9aad-a3c48b3cdc3a";
+				PROVISIONING_PROFILE_SPECIFIER = thatlive.live;
 			};
 			name = Debug;
 		};
@@ -1083,6 +1096,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: matu zheng (G26R6KR5M9)";
+				DEVELOPMENT_TEAM = YKZE487C67;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib",
@@ -1090,14 +1105,17 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LivingShow/Class/Other/LivePCH.pch";
 				INFOPLIST_FILE = LivingShow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib/UMSocial_Sdk_5.2.1",
 					"$(PROJECT_DIR)/LivingShow/Class/Lib/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kkeye.cn.LivingShow;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thatlive.live;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6d8c9c1c-9250-4db6-9aad-a3c48b3cdc3a";
+				PROVISIONING_PROFILE_SPECIFIER = thatlive.live;
 			};
 			name = Release;
 		};

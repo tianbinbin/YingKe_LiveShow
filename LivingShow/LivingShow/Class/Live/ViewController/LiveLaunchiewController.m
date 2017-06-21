@@ -28,7 +28,7 @@
 
 - (IBAction)StartLiveBtn:(id)sender {
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"链接真机后将代码放开" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"一定要链接真机，不然会崩溃的" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
@@ -38,6 +38,16 @@
     [alert addAction:ok];
     
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        
+        UIView * back = [[UIView alloc] initWithFrame:self.view.bounds];
+        back.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:back];
+        
+        // 开始直播
+        LFLivePreview * liveView = [[LFLivePreview alloc] initWithFrame:self.view.bounds];
+        liveView.VC = self;
+        [self.view addSubview:liveView];
         
        
     }];
@@ -49,18 +59,6 @@
         
     }];
 
-    
-    /*
-    UIView * back = [[UIView alloc] initWithFrame:self.view.bounds];
-    back.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:back];
-    
-    // 开始直播
-    LFLivePreview * liveView = [[LFLivePreview alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:liveView];
-     */
-    
-    
 }
 
 @end

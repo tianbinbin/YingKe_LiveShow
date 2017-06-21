@@ -48,5 +48,6 @@
 #import "UMSocial.h"
 #import "UMSocialSinaSSOHandler.h"
 #import "SXTUserHelper.h"
+#import <CoreMedia/CoreMedia.h>
 
 #endif /* LivePCH_pch */

@@ -19,13 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-rR-CSe">
-                    <rect key="frame" x="311" y="0.0" width="64" height="64"/>
-                    <state key="normal" image="launch_close"/>
-                    <connections>
-                        <action selector="closeLaunch:" destination="-1" eventType="touchUpInside" id="Awe-e7-gf5"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="北京市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-hF-65n">
                     <rect key="frame" x="27" y="22" width="88" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,8 +33,9 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_zbfx" translatesAutoresizingMaskIntoConstraints="NO" id="SbQ-9K-RzW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJt-so-Lkc">
-                    <rect key="frame" x="114" y="308" width="115" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJt-so-Lkc">
+                    <rect key="frame" x="138.5" y="312.5" width="98" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <state key="normal" title="开始直播">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -49,22 +43,43 @@
                         <action selector="StartLiveBtn:" destination="-1" eventType="touchUpInside" id="OhF-Me-a8H"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="输入直播标题" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-R3-2pf">
-                    <rect key="frame" x="114" y="244" width="129" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="输入直播标题" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-R3-2pf">
+                    <rect key="frame" x="100" y="200" width="175" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TOl-7R-Ja9"/>
+                    </constraints>
                     <color key="textColor" red="0.93150906739999995" green="0.2959942861" blue="0.27405571779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是我原来的推流地址 现在估计不能用了@&quot;rtmp://live.hkstv.hk.lxdns.com:1935/live/153cm&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-vH-j8f">
+                    <rect key="frame" x="100" y="383.5" width="175" height="95.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="0.27057327069999998" blue="0.47390792609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ND8-rR-CSe">
+                    <rect key="frame" x="303" y="22" width="64" height="64"/>
+                    <state key="normal" image="launch_close"/>
+                    <connections>
+                        <action selector="closeLaunch:" destination="-1" eventType="touchUpInside" id="Awe-e7-gf5"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="SbQ-9K-RzW" secondAttribute="bottom" id="2D0-Wh-FM3"/>
                 <constraint firstItem="XJt-so-Lkc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6D1-2G-LI1"/>
+                <constraint firstAttribute="trailing" secondItem="9xx-vH-j8f" secondAttribute="trailing" constant="100" id="BjC-xY-7li"/>
                 <constraint firstAttribute="trailing" secondItem="SbQ-9K-RzW" secondAttribute="trailing" id="DdK-B2-Vaj"/>
+                <constraint firstItem="mSB-R3-2pf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="KJv-Ic-nMY"/>
                 <constraint firstAttribute="trailing" secondItem="ND8-rR-CSe" secondAttribute="trailing" id="RnL-8E-Bk3"/>
                 <constraint firstItem="SbQ-9K-RzW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SSW-r0-JMJ"/>
                 <constraint firstItem="ND8-rR-CSe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VDQ-gt-kYB"/>
+                <constraint firstAttribute="trailing" secondItem="mSB-R3-2pf" secondAttribute="trailing" constant="100" id="YSh-OR-YqD"/>
+                <constraint firstItem="9xx-vH-j8f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="biF-Ai-zDc"/>
+                <constraint firstItem="9xx-vH-j8f" firstAttribute="top" secondItem="XJt-so-Lkc" secondAttribute="bottom" constant="30" id="gSx-9m-ZFh"/>
+                <constraint firstItem="mSB-R3-2pf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="jRc-cM-PCT"/>
                 <constraint firstItem="XJt-so-Lkc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pjC-67-s6V"/>
                 <constraint firstItem="SbQ-9K-RzW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s57-bW-YZK"/>
             </constraints>
